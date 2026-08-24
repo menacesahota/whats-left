@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import { SITE_NAME } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/privacy",
   title: "Privacy",
   description: `${SITE_NAME} does not create accounts. Calculator numbers stay in your browser. Email summaries are sent from your own mail app.`,
-};
+});
 
 export default function PrivacyPage() {
   return (

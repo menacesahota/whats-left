@@ -24,8 +24,9 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: `${SITE_TAGLINE} Take-home pay, budget, debt, emergency fund, rent vs buy, and bills.`,
-  alternates: {
-    canonical: "/",
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

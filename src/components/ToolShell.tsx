@@ -19,11 +19,25 @@ export function ToolShell({
 }: ToolShellProps) {
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:py-12">
-      <p className="no-print mb-6">
-        <Link href="/tools" className="text-sm font-medium text-accent hover:text-accent-hover">
-          ← All tools
-        </Link>
-      </p>
+      <nav className="no-print mb-6 text-sm" aria-label="Breadcrumb">
+        <ol className="flex flex-wrap items-center gap-1.5 text-muted">
+          <li>
+            <Link href="/" className="font-medium text-accent hover:text-accent-hover">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <Link href="/tools" className="font-medium text-accent hover:text-accent-hover">
+              Tools
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li className="text-foreground" aria-current="page">
+            {title}
+          </li>
+        </ol>
+      </nav>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
           <h1 className="font-serif text-3xl font-semibold tracking-tight text-pretty text-foreground sm:text-4xl">
