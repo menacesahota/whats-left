@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { SALVY_NAME, SALVY_URL } from "@/lib/brand";
 
 export function Footer() {
   return (
@@ -9,6 +10,15 @@ export function Footer() {
           <Logo compact />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
             Estimates only. Not financial advice. Tax rules change.
+          </p>
+          <p className="mt-3 text-sm text-muted">
+            From{" "}
+            <a
+              href={SALVY_URL}
+              className="font-medium text-foreground hover:text-accent"
+            >
+              {SALVY_NAME}
+            </a>
           </p>
         </div>
         <nav

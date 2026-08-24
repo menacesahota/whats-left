@@ -65,10 +65,9 @@ function ToolGlyph({ name }: { name: ToolMeta["icon"] }) {
       );
     case "fund":
       return (
-        <svg {...props}>
-          <path d="M12 4v16" />
-          <path d="M8 8.2C8 6.2 9.8 4.5 12 4.5s4 1.7 4 3.7-1.8 3.3-4 3.3-4 1.4-4 3.3 1.8 3.7 4 3.7 4-1.7 4-3.7" />
-        </svg>
+        <span className="text-[1.15rem] font-semibold leading-none" aria-hidden="true">
+          £
+        </span>
       );
     case "home":
       return (
