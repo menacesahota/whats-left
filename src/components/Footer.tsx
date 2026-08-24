@@ -1,11 +1,23 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   return (
-    <footer className="no-print mt-auto border-t border-border">
-      <div className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-        <p>Estimates only. Not financial advice. Tax rules change.</p>
-        <nav className="flex gap-4" aria-label="Footer">
+    <footer className="no-print mt-auto border-t border-border bg-card/40">
+      <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <Logo compact />
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
+            Estimates only. Not financial advice. Tax rules change.
+          </p>
+        </div>
+        <nav
+          className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted"
+          aria-label="Footer"
+        >
+          <Link href="/tools" className="hover:text-foreground">
+            Tools
+          </Link>
           <Link href="/about" className="hover:text-foreground">
             About
           </Link>

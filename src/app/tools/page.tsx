@@ -13,11 +13,11 @@ export default function ToolsPage() {
       <h1 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
         Tools
       </h1>
-      <p className="mt-2 max-w-2xl text-muted">
+      <p className="mt-2 max-w-2xl leading-relaxed text-muted">
         Every tool is free. Numbers stay in your browser unless you email a
         summary to yourself.
       </p>
-      <ToolGrid />
+      <ToolGrid className="mt-8" />
     </div>
   );
 }

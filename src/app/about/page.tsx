@@ -13,16 +13,16 @@ export default function AboutPage() {
       <h1 className="font-serif text-3xl font-semibold tracking-tight">
         About {SITE_NAME}
       </h1>
-      <p className="mt-4 text-muted">
+      <p className="mt-4 leading-relaxed text-muted">
         Free calculators for people paid a salary, paying rent, or thinking
         about a mortgage. Type numbers in. Get a straight answer.
       </p>
-      <p className="mt-4 text-muted">
+      <p className="mt-4 leading-relaxed text-muted">
         It is not a bank. There is no login, no Open Banking, and we do not
         look at your accounts. It is not for limited companies, sole-trader
         tax, payroll or invoices.
       </p>
-      <p className="mt-4 text-muted">
+      <p className="mt-4 leading-relaxed text-muted">
         Figures are estimates. Tax rules change. Nothing here is financial
         advice.
       </p>

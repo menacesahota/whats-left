@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #f7f5f2;
+  --color-background: #f3efe6;
   --color-foreground: #1c1917;
   --color-accent: #0f766e;
   --color-accent-hover: #0d5c56;
   --color-muted: #57534e;
-  --color-card: #fffefc;
-  --color-border: #e7e5e4;
+  --color-card: #fffcf7;
+  --color-border: #e4ddd0;
   --color-danger: #b91c1c;
   --color-danger-bg: #fef2f2;
-  --font-sans: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -20,12 +20,27 @@ html {
 
 body {
   background-color: var(--color-background);
+  background-image: radial-gradient(
+    900px 420px at 50% -80px,
+    #fff8ee 0%,
+    transparent 70%
+  );
   color: var(--color-foreground);
+}
+
+::selection {
+  background-color: #99f6e4;
+  color: #1c1917;
 }
 
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--color-accent);
 }
 
 @media print {

@@ -9,7 +9,7 @@ import {
   ResultRow,
 } from "@/components/ResultPanel";
 import { ToolShell } from "@/components/ToolShell";
-import { cardClass } from "@/components/ui";
+import { cardClass, choiceClass, choiceGroupClass } from "@/components/ui";
 import { SITE_NAME } from "@/lib/brand";
 import { formatGBP, parseAmount, toNumber } from "@/lib/money";
 import {
@@ -118,12 +118,13 @@ export function TakeHomeTool() {
         >
           <fieldset>
             <legend className="mb-2 text-sm font-medium">Salary period</legend>
-            <div className="flex flex-wrap gap-3">
+            <div className={choiceGroupClass}>
               {(Object.keys(PERIOD_LABEL) as Period[]).map((p) => (
-                <label key={p} className="flex items-center gap-2 text-sm">
+                <label key={p} className={choiceClass(period === p)}>
                   <input
                     type="radio"
                     name="period"
+                    className="sr-only"
                     checked={period === p}
                     onChange={() => {
                       setGross((current) => convertGross(current, period, p));

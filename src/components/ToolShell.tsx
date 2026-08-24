@@ -26,10 +26,10 @@ export function ToolShell({
       </p>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
-          <h1 className="font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="font-serif text-3xl font-semibold tracking-tight text-pretty text-foreground sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-2 text-base text-muted">{description}</p>
+          <p className="mt-2 text-base leading-relaxed text-muted">{description}</p>
         </div>
         <button type="button" onClick={onDemo} className={`${btnSecondary} no-print shrink-0`}>
           Try with demo numbers
