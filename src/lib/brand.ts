@@ -1,4 +1,5 @@
-export const SITE_NAME = "What's Left";
+/** Typographic apostrophe (U+2019) so titles stay "What's Left" instead of &#x27;. */
+export const SITE_NAME = "What’s Left";
 export const SITE_TAGLINE =
   "Free UK money tools. Type numbers in. Get a straight answer.";
 export const SITE_URL = "https://whatsleft.money";

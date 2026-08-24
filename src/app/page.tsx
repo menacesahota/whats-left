@@ -1,21 +1,23 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { LeftoverSketch } from "@/components/LeftoverSketch";
 import { ToolGrid } from "@/components/ToolGrid";
 import { btnPrimary, btnSecondary } from "@/components/ui";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/brand";
+import { homeJsonLd, pageMetadata } from "@/lib/seo";
 import { TAX_YEAR } from "@/lib/uk-tax";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: `${SITE_NAME} — Free UK money tools`,
-  },
+export const metadata = pageMetadata({
+  path: "/",
+  title: `${SITE_NAME} — Free UK money tools`,
   description: `${SITE_TAGLINE} Take-home pay, budget, debt, emergency fund, rent versus buy, and bills. No bank login.`,
-};
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
+      <JsonLd data={homeJsonLd()} />
       <section className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
         <div>
           <p className="text-sm font-medium tracking-wide text-accent">
@@ -32,7 +34,7 @@ export default function HomePage() {
             <Link href="/tools" className={btnPrimary}>
               Browse tools
             </Link>
-            <Link href="/about" className={btnSecondary}>
+            <Link href="/about#how-it-works" className={btnSecondary}>
               How it works
             </Link>
           </div>

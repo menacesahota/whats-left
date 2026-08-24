@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import { ToolGrid } from "@/components/ToolGrid";
+import { pageMetadata, toolsHubJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/tools",
   title: "All tools",
   description:
     "Free UK calculators: take-home pay, monthly budget, debt payoff, emergency fund, rent versus buy, and a bills converter.",
-};
+});
 
 export default function ToolsPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
+      <JsonLd data={toolsHubJsonLd()} />
       <h1 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
         Tools
       </h1>

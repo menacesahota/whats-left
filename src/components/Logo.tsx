@@ -23,7 +23,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
           compact ? "text-[0.98rem]" : "text-[0.95rem] sm:text-[1.1rem]"
         }`}
       >
-        <span className="font-medium text-muted">What&apos;s</span>
+        <span className="font-medium text-muted">What’s</span>
         <span className="ml-[0.28em] font-semibold text-foreground">Left</span>
       </span>
     </span>
