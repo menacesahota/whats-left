@@ -62,7 +62,16 @@ describe("pageMetadata", () => {
     expect(meta.openGraph?.title).toBe(
       `Take-home pay calculator | ${SITE_NAME}`,
     );
+    expect(meta.openGraph?.images).toEqual([
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} — free UK money tools`,
+      },
+    ]);
     expect(meta.twitter?.title).toBe(`Take-home pay calculator | ${SITE_NAME}`);
+    expect(meta.twitter?.images).toEqual(["/opengraph-image"]);
     expect(meta.robots).toEqual({ index: true, follow: true });
   });
 

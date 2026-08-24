@@ -38,6 +38,12 @@ export function pageMetadata({
   const canonical = pagePath(path);
   const url = absoluteUrl(canonical);
   const socialTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`;
+  const socialImage = {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: `${SITE_NAME} — free UK money tools`,
+  };
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -52,11 +58,13 @@ export function pageMetadata({
       url,
       title: socialTitle,
       description,
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
       description,
+      images: ["/opengraph-image"],
     },
     robots: {
       index: true,

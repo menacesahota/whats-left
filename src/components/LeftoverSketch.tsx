@@ -9,7 +9,7 @@ export function LeftoverSketch() {
         <Bar label="Take-home" amount="£2,840" width="100%" tone="muted" />
         <Bar label="Bills and spending" amount="£2,050" width="72%" tone="mid" />
         <div className="-mx-2 rounded-xl bg-accent/10 px-2 py-3">
-          <Bar label="What's left" amount="£790" width="28%" tone="accent" />
+          <Bar label="What’s left" amount="£790" width="28%" tone="accent" />
         </div>
       </dl>
     </figure>
