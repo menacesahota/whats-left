@@ -108,7 +108,7 @@ export function TakeHomeTool() {
   return (
     <ToolShell
       title="Take-home pay"
-      description="Estimate monthly pay after income tax, employee National Insurance, student loan and pension. Figures are an estimate for the 2025/26 tax year."
+      description={`Estimate monthly pay after income tax, employee National Insurance, student loan and pension. Figures are an estimate for the ${TAX_YEAR} tax year.`}
       onDemo={loadDemo}
     >
       <div className="grid gap-8 lg:grid-cols-2">

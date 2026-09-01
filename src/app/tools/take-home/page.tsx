@@ -1,11 +1,11 @@
 import { ToolPage } from "@/components/ToolPage";
 import { TakeHomeTool } from "@/components/tools/TakeHomeTool";
 import { pageMetadata } from "@/lib/seo";
+import { TAX_YEAR } from "@/lib/uk-tax";
 
 const PATH = "/tools/take-home";
 const TITLE = "Take-home pay calculator";
-const DESCRIPTION =
-  "Estimate UK take-home pay for 2025/26 after income tax, employee National Insurance, student loan and pension. England, Wales, NI and Scotland.";
+const DESCRIPTION = `Estimate UK take-home pay for ${TAX_YEAR} after income tax, employee National Insurance, student loan and pension. England, Wales, NI and Scotland.`;
 
 export const metadata = pageMetadata({
   path: PATH,

@@ -38,6 +38,11 @@ describe("calculateTakeHome", () => {
     pensionPercent: 0,
   };
 
+  it("labels the estimate as 2026/27", () => {
+    const result = calculateTakeHome({ ...base, annualGross: 35_000 });
+    expect(result.taxYear).toBe("2026/27");
+  });
+
   it("estimates £35,000 rUK with no pension or student loan", () => {
     const result = calculateTakeHome({ ...base, annualGross: 35_000 });
     expect(result.incomeTax).toBeCloseTo(4_486, 2);
@@ -54,7 +59,7 @@ describe("calculateTakeHome", () => {
       region: "scotland",
     });
     expect(scotland.incomeTax).toBeGreaterThan(ruk.incomeTax);
-    expect(scotland.incomeTax).toBeCloseTo(4_532.82, 2);
+    expect(scotland.incomeTax).toBeCloseTo(4_501.07, 2);
   });
 
   it("applies personal allowance taper at £110,000", () => {
@@ -69,7 +74,7 @@ describe("calculateTakeHome", () => {
       annualGross: 35_000,
       studentLoan: "plan2",
     });
-    expect(result.studentLoan).toBeCloseTo(587.7, 2);
+    expect(result.studentLoan).toBeCloseTo(505.35, 2);
   });
 
   it("treats pension as salary sacrifice (reduces tax and NI)", () => {

@@ -5,7 +5,7 @@ import { TOOLS } from "@/lib/tools";
 
 export const metadata = pageMetadata({
   path: "/about",
-  title: "About",
+  title: "About UK money calculators",
   description: `${SITE_NAME} is a set of free money calculators for UK individuals. Not a bank, not payroll software, and not financial advice.`,
 });
 

@@ -1,17 +1,16 @@
 /**
- * UK PAYE estimate rates for the 2025/26 tax year (6 April 2025 – 5 April 2026).
+ * UK PAYE estimate rates for the 2026/27 tax year (6 April 2026 – 5 April 2027).
  *
  * Update this file when HMRC publishes new bands. Sources:
- * - https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2025-to-2026
- * - Plan 5 threshold (£25,000) is not on that employer page; it is the published
- *   Plan 5 repayment threshold (repayments typically from April 2026).
+ * - https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027
+ * - https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past
  *
  * This is an annualised estimate, not a PAYE period-by-period payroll run.
  */
 
 import { round2 } from "./money";
 
-export const TAX_YEAR = "2025/26";
+export const TAX_YEAR = "2026/27";
 
 export const PERSONAL_ALLOWANCE = 12_570;
 export const PA_TAPER_THRESHOLD = 100_000;
@@ -36,9 +35,9 @@ export const STUDENT_LOAN_PLANS: Record<
   Exclude<StudentLoanPlan, "none">,
   { label: string; threshold: number; rate: number }
 > = {
-  plan1: { label: "Plan 1", threshold: 26_065, rate: 0.09 },
-  plan2: { label: "Plan 2", threshold: 28_470, rate: 0.09 },
-  plan4: { label: "Plan 4", threshold: 32_745, rate: 0.09 },
+  plan1: { label: "Plan 1", threshold: 26_900, rate: 0.09 },
+  plan2: { label: "Plan 2", threshold: 29_385, rate: 0.09 },
+  plan4: { label: "Plan 4", threshold: 33_795, rate: 0.09 },
   plan5: { label: "Plan 5", threshold: 25_000, rate: 0.09 },
   postgrad: { label: "Postgraduate", threshold: 21_000, rate: 0.06 },
 };
@@ -64,9 +63,9 @@ const RUK_BANDS: TaxBand[] = [
  * with advanced/top using the £125,140 additional-rate threshold of total income.
  */
 const SCOTLAND_BANDS: TaxBand[] = [
-  { name: "Starter", rate: 0.19, width: 2_827 },
-  { name: "Basic", rate: 0.2, width: 14_921 - 2_827 },
-  { name: "Intermediate", rate: 0.21, width: 31_092 - 14_921 },
+  { name: "Starter", rate: 0.19, width: 3_967 },
+  { name: "Basic", rate: 0.2, width: 16_956 - 3_967 },
+  { name: "Intermediate", rate: 0.21, width: 31_092 - 16_956 },
   { name: "Higher", rate: 0.42, width: 62_430 - 31_092 },
   { name: "Advanced", rate: 0.45, untilTotalIncome: ADDITIONAL_RATE_THRESHOLD },
   { name: "Top", rate: 0.48 },
