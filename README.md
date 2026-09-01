@@ -21,7 +21,7 @@ npm start
 
 ## Tax rates
 
-PAYE, National Insurance and student loan figures for the **2025/26** tax year live in [`src/lib/uk-tax.ts`](src/lib/uk-tax.ts). Update that file when HMRC publishes new bands. The take-home tool labels results as an estimate for that year.
+PAYE, National Insurance and student loan figures for the **2026/27** tax year live in [`src/lib/uk-tax.ts`](src/lib/uk-tax.ts). Update that file when HMRC publishes new bands. The take-home tool labels results as an estimate for that year.
 
 Pension contributions are modelled as salary sacrifice (they reduce taxable pay and employee NI).
 
