@@ -74,7 +74,7 @@ describe("calculateTakeHome", () => {
       annualGross: 35_000,
       studentLoan: "plan2",
     });
-    expect(result.studentLoan).toBeCloseTo(561.15, 2);
+    expect(result.studentLoan).toBeCloseTo(505.35, 2);
   });
 
   it("treats pension as salary sacrifice (reduces tax and NI)", () => {
